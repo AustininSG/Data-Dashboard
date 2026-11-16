@@ -33,3 +33,18 @@ Open http://localhost:5173
 - 今日 vs 昨日 24h comparison chart (all KPIs switchable)
 - 11-channel payout breakdown with donut + rank bars
 - 「模拟实时推送」nudges OL / GB / CN every 3s with number roll
+
+## Deploy (Vercel)
+
+### Option A — Import GitHub repo (recommended)
+1. Open https://vercel.com/new
+2. Import `AustininSG/Data-Dashboard`
+3. Framework: Vite (auto). Build: `npm run build`. Output: `dist`
+4. Deploy. Prefer Production branch `main` (merge the feature branch first) or set Production Branch to `cursor/ops-dashboard-7d0c`.
+
+### Option B — CLI with token
+```bash
+npx vercel login   # or export VERCEL_TOKEN=...
+npx vercel         # preview
+npx vercel --prod  # production
+```
